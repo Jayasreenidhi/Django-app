@@ -6,4 +6,5 @@ COPY . .
 # RUN sudo apt-get update
 # RUN  sudo apt-get -y upgrade
 # RUN python3 manage.py migrate
+RUN python manage.py runserver
 CMD ["python","manage.py","runserver","0.0.0.0:8000"]
